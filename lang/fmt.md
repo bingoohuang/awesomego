@@ -1,6 +1,12 @@
 
 # Dynamically pass values to Sprintf or Printf
 
+原打算在[httplog](https://github.com/bingoohuang/httplog)中，也像[java版本](https://github.com/gobars/httplog)那样，在日志文件中输出时，增加一个abbrevMaxSize支持（默认64）。
+
+对代码分析了一下，这个不是标准动作，不是简单的几行改动就可以的，得改动格式化的地方，或者JSON序列化的地方才行。打算暂时不动，等真正有需求再说。
+
+分析的过程中，顺便了解了一下fmt包的实现。然后想到上次动态宽度的实现。
+
 以前都是"曲线救国"，先拼fmt，然后再打印。知道看到[这段代码](https://github.com/bingoohuang/sqlite3perf/blob/master/generate.go#L187)
 
 ```go
