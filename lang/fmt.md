@@ -15,6 +15,8 @@ log.Printf("%*d/%*d (%6.2f%%) written in %s, avg: %s/record, %2.2f records/s",
 
 一般也是曲线救国来完成，搜索了一下，fmt没办法直接支持这种。
 
+https://play.golang.org/p/BeFr0ixJR3i
+
 ```go
 // FormatFloat format a float64 with precision without tailing zeros and dot.
 // eg:
